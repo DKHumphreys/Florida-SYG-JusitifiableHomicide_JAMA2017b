@@ -1,0 +1,43 @@
+### Florida stand your ground law & justifiable homicide: replication files for Humphreys, Gasparrini & Wiebe (2017b); JAMA Int Med 
+
+--------------------------------------------------------------------------------
+
+In this example code we reproduce the main results of analyses examining the impact of Florida's Stand Your Ground Law on justifiable homicide. These analyses were conducted in response to comments on a previous analysis (Humphreys et al., 2017a; JAMA Int Med). 
+
+The data provided here were obtained from two sources: 
+
+(a) mortality data from the the Centers for Disease Control at:
+
+Centers for Disease Control and Prevention. Multiple Cause of Death 1999–2014 on CDC WONDER online database. https://wonder.cdc.gov/mcd-icd10.html. Published 2016. Accessed January 21, 2016. 
+
+(b) monthly counts of justifiable homicide in Florida provided by the Florida Department of Law Enforcement (FDLE) following a freedom of information (FOIA) request.
+
+The manuscript from which these findings are taken is:
+
+Humphreys, D.K., Gasparrini, A., Wiebe D.J. Association between enactment of a “Stand Your Ground” self-defense law and unlawful homicides in Florida. *JAMA Intern Med.* 2017;**177**(10):1523-1524. [[freely available here](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2648742)]
+
+--------------------------------------------------------------------------------
+
+**1. R code:**
+
+**SYG_Justifiable Homicide.R** provides the functions to compute the descriptive statistics and effect estimates shown in the main table of Humphreys et al., (2017b).
+
+**SYG_Just_Hom_Figure.R** provides the functions to reproduce Figure 1.
+
+**2. Data:**
+The R files use data contained in one csv file: **All_Florida_Justifiable Homicide** 
+
+**3. Codebook**
+
+|variable  | definition                                                                      | Source    |
+|----------|---------------------------------------------------------------------------------|-----------|
+|year      | year                                                                            |           |
+|month     | month                                                                           |           |
+|j_hom     | monthly count of justifiable homicide in Florida                                | FDLE      |
+|cdc_hom   | monthly count of homicide in Florida                                            | CDC       |
+|time      | cumulative time in months                                                       |           |
+|Sign      | pre-post binary variable of date the law was signed, 0= before, 1=after         |           |
+|Effective | pre-post binary variable of date the law came into effect, 0= before, 1=after   |           |
+|stdpop    | Florida population                                                              | US Census |
+
+Download as a ZIP file using the green button *Clone or download* above.
